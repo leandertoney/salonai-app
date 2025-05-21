@@ -1,17 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Pages
-import Landing from './pages/Landing.tsx';
-import Dashboard from './pages/Dashboard.tsx';
-import Calendar from './pages/Calendar.tsx';
-import Clients from './pages/Clients.tsx';
-import Payments from './pages/Payments.tsx';
-import Marketing from './pages/Marketing.tsx';
-import Settings from './pages/Settings.tsx';
-import Pricing from './pages/Pricing.tsx';
-import Inventory from './pages/Inventory.tsx';
-import ClientProfile from './pages/ClientProfile.tsx';
-import NotFound from './pages/NotFound.tsx';
+import Landing from './pages/Landing';
+import Dashboard from './pages/Dashboard';
+import Calendar from './pages/Calendar';
+import Clients from './pages/Clients';
+import Payments from './pages/Payments';
+import Marketing from './pages/Marketing';
+import Settings from './pages/Settings';
+import Pricing from './pages/Pricing';
+import Inventory from './pages/Inventory';
+import ClientProfile from './pages/ClientProfile';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
