@@ -5,7 +5,7 @@ import { CalendarTimeSlot } from '../components/CalendarTimeSlot';
 import { appointments } from '../data/mockData';
 import { ChevronLeft, ChevronRight, Plus } from 'lucide-react';
 
-export const Calendar: React.FC = () => {
+const Calendar: React.FC = () => {
   // States for calendar view
   const [currentDate, setCurrentDate] = useState(new Date('2025-04-15'));
   const [viewMode, setViewMode] = useState<'day' | 'week'>('week');
@@ -156,3 +156,5 @@ export const Calendar: React.FC = () => {
     </div>
   );
 };
+
+export default Calendar;

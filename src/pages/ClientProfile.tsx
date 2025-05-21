@@ -17,7 +17,7 @@ import {
   User
 } from 'lucide-react';
 
-export const ClientProfile: React.FC = () => {
+const ClientProfile: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const client = clients.find(c => c.id === id);
   
@@ -233,3 +233,5 @@ export const ClientProfile: React.FC = () => {
     </div>
   );
 };
+
+export default ClientProfile;

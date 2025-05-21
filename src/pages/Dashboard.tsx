@@ -8,7 +8,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '../components/Card';
 import { appointments, transactions, revenueData } from '../data/mockData';
 import { Calendar, UserPlus, MessageSquare } from 'lucide-react';
 
-export const Dashboard: React.FC = () => {
+const Dashboard: React.FC = () => {
   // Get today's appointments
   const todaysDate = new Date().toISOString().split('T')[0];
   const todaysAppointments = appointments.filter(
@@ -101,3 +101,5 @@ export const Dashboard: React.FC = () => {
     </div>
   );
 };
+
+export default Dashboard;

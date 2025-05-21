@@ -13,7 +13,7 @@ import {
   Package
 } from 'lucide-react';
 
-export const Landing: React.FC = () => {
+const Landing: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -291,3 +291,5 @@ export const Landing: React.FC = () => {
     </div>
   );
 };
+
+export default Landing;

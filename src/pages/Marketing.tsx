@@ -5,7 +5,7 @@ import { CampaignItem } from '../components/CampaignItem';
 import { campaigns } from '../data/mockData';
 import { Mail, MessageSquare, Plus } from 'lucide-react';
 
-export const Marketing: React.FC = () => {
+const Marketing: React.FC = () => {
   return (
     <div>
       <div className="flex justify-between items-center mb-6">
@@ -87,3 +87,5 @@ export const Marketing: React.FC = () => {
     </div>
   );
 };
+
+export default Marketing;

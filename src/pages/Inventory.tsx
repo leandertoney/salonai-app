@@ -6,7 +6,7 @@ import { supabase } from '../lib/supabase';
 import { InventoryModal } from '../components/InventoryModal';
 import type { InventoryItem, InventoryCategory } from '../types';
 
-export const Inventory: React.FC = () => {
+const Inventory: React.FC = () => {
   const [items, setItems] = useState<InventoryItem[]>([]);
   const [categories, setCategories] = useState<InventoryCategory[]>([]);
   const [loading, setLoading] = useState(true);
@@ -83,17 +83,17 @@ export const Inventory: React.FC = () => {
                          item.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          item.sku.toLowerCase().includes(searchQuery.toLowerCase());
     
-    const matchesCategory = selectedCategory === 'all' || item.category_id === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     
     return matchesSearch && matchesCategory;
   });
 
   const getLowStockItems = () => {
-    return items.filter(item => item.in_stock <= item.reorder_point).length;
+    return items.filter(item => item.inStock <= item.reorderPoint).length;
   };
 
   const getTotalValue = () => {
-    return items.reduce((total, item) => total + (item.retail_price * item.in_stock), 0);
+    return items.reduce((total, item) => total + (item.retailPrice * item.inStock), 0);
   };
 
   return (
@@ -221,18 +221,18 @@ export const Inventory: React.FC = () => {
                           </div>
                         </td>
                         <td className="py-3 px-4">{item.sku}</td>
-                        <td className="py-3 px-4">{item.category?.name}</td>
+                        <td className="py-3 px-4">{item.category}</td>
                         <td className="py-3 px-4 text-right">
                           <span className={`${
-                            item.in_stock <= item.reorder_point
+                            item.inStock <= item.reorderPoint
                               ? 'text-error-600'
                               : 'text-neutral-900'
                           }`}>
-                            {item.in_stock}
+                            {item.inStock}
                           </span>
                         </td>
-                        <td className="py-3 px-4 text-right">${item.unit_price.toFixed(2)}</td>
-                        <td className="py-3 px-4 text-right">${item.retail_price.toFixed(2)}</td>
+                        <td className="py-3 px-4 text-right">${item.unitPrice.toFixed(2)}</td>
+                        <td className="py-3 px-4 text-right">${item.retailPrice.toFixed(2)}</td>
                         <td className="py-3 px-4 text-right">
                           <Button 
                             variant="outline" 
@@ -265,3 +265,5 @@ export const Inventory: React.FC = () => {
     </div>
   );
 };
+
+export default Inventory;

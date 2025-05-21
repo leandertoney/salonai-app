@@ -6,7 +6,7 @@ import { ClientItem } from '../components/ClientItem';
 import { clients } from '../data/mockData';
 import { Plus, Search, Filter } from 'lucide-react';
 
-export const Clients: React.FC = () => {
+const Clients: React.FC = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   
@@ -76,3 +76,5 @@ export const Clients: React.FC = () => {
     </div>
   );
 };
+
+export default Clients;

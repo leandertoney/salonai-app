@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { Home } from 'lucide-react';
 
-export const NotFound: React.FC = () => {
+const NotFound: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-neutral-50">
       <div className="text-center">
@@ -21,3 +21,5 @@ export const NotFound: React.FC = () => {
     </div>
   );
 };
+
+export default NotFound;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function Payments() {
+function Payments() {
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-6">Payments</h1>
@@ -10,3 +10,5 @@ export function Payments() {
     </div>
   );
 }
+
+export default Payments;

@@ -3,7 +3,7 @@ import { Card, CardHeader, CardTitle, CardContent } from '../components/Card';
 import { Button } from '../components/Button';
 import { User, Building2, Clock, CreditCard, Bell, Shield } from 'lucide-react';
 
-export const Settings: React.FC = () => {
+const Settings: React.FC = () => {
   return (
     <div>
       <div className="mb-6">
@@ -221,3 +221,5 @@ export const Settings: React.FC = () => {
     </div>
   );
 };
+
+export default Settings;

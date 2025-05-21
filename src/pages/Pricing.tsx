@@ -1,7 +1,8 @@
 import React from 'react';
 import { PricingCard } from '../components/PricingCard';
+import { pricing } from '../data/mockData';
 
-export function Pricing() {
+const Pricing: React.FC = () => {
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -15,9 +16,13 @@ export function Pricing() {
         </div>
         
         <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
-          <PricingCard />
+          {pricing.map((tier) => (
+            <PricingCard key={tier.id} tier={tier} />
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Pricing;
